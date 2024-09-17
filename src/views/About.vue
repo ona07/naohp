@@ -16,7 +16,7 @@
           <h2>HISTORY</h2>
           <ul>
             <li v-for="(experience, index) in workExperience" :key="index">
-            {{ experience.period }} {{ experience.position }} {{ experience.company }}
+            {{ experience.period }}  {{ experience.company }} {{ experience.position }}
             </li>
           </ul>
         </div>
@@ -30,13 +30,13 @@
           </div>
         </div>
         <div class="interns">
-          <h2>INTERNS</h2>
+          <h2>ARTICLES</h2>
           <div class="intern-container">
-            <div v-for="(intern, index) in interns" :key="index" class="project-box">
-              <a class="project-position" :href="intern.companyLink" target="_blank">{{ intern.company }}</a>
-              <span class="project-position"> ({{ intern.period }})</span>
+            <div v-for="(article, index) in articles" :key="index" class="project-box">
+              <a class="project-position" :href="article.companyLink" target="_blank">{{ article.company }}</a>
+              <span class="project-position"> ({{ article.period }})</span>
               <br>
-              <a class="project-name" :href="intern.article" target="_blank">{{ intern.name }}</a>
+              <a class="project-name" :href="article.link" target="_blank">{{ article.name }}</a>
             </div>
           </div>
         </div>
@@ -61,29 +61,29 @@ export default {
       ],
       github: 'https://github.com/ona07',
       workExperience: [
-        { period: '2004.01.29', position: '', company: '誕生' },
-        { period: '', position: '', company: '' }
+        { period: '2004.01.29',  company: '誕生' ,position: ''},
+        { period: '2020.08.31-2021.04.07', company: 'E-pala' , position: 'menber'},
+        { period: '2022.04.18-2023.3.31', company: 'Fun-i-Con' , position: 'menber', },
+        { period: '2023.04.01-2024.3.31', company: 'Fun-i-Con' , position: 'menber', },
+        { period: '2024.04.01-2025.3.31', company: 'Fun-i-Con' , position: 'poloject leader', },
+        { period: '2024.04.01-2025.3.31', company: '数理モデリングプロジェクト' , position: 'leader', },
       ],
       skills: [
         'Japanese', 'FastAPI', 'Python', 'HTML', 'Javascript', 'CSS', 'Vue.js', 'Processing', 'C', 'R', 'Blender',
         'analysis (mathematical)', 'Practical English Proficiency Test Level 4',
       ],
-      projects: [
-        { frame: '高度ICT演習', team: 'fun-i-con', position: 'backend', link: 'https://www.fun.ac.jp/advanced-ict' },
-        { frame: 'いさりびwith', team: '商品開発チーム', position: 'subleader & web developer' },
-      ],
-      interns: [
+      articles: [
         {
           company: 'CosstyHD (株)ECOTEC',
           name: '建設会社でDXインターンシップ',
           period: '2023/03/13~2023/03/16',
-          article: 'https://note.com/crosstyhd_dx/n/n304c759e42e8'
+          link: 'https://note.com/crosstyhd_dx/n/n304c759e42e8'
         },
         {
-          company: 'CosstyHD (株)ECOTEC',
-          name: '建設会社でDXインターンシップ',
-          period: '2023/03/13~2023/03/16',
-          article: 'https://note.com/crosstyhd_dx/n/n304c759e42e8'
+          company: '小樽商科大学',
+          name: '北の6大学',
+          period: '2022/08/29~2023/03/09',
+          link: 'https://www.otaru-uc.ac.jp/shoudai_blog/263376/'
         },
       ],
     };
