@@ -29,9 +29,9 @@
             </div>
           </div>
         </div>
-        <div class="interns">
+        <div class="articles">
           <h2>ARTICLES</h2>
-          <div class="intern-container">
+          <div class="article-container">
             <div v-for="(article, index) in articles" :key="index" class="project-box">
               <a class="project-position" :href="article.companyLink" target="_blank">{{ article.company }}</a>
               <span class="project-position"> ({{ article.period }})</span>
@@ -55,21 +55,16 @@ export default {
     return {
       me: [
         { item: 'Name', value: '小久保　尚' },
-        { item: 'Age', value: '19' },
+        { item: 'Age', value: '20' },
         { item: 'University', value: '公立はこだて未来大学' },
-        { item: 'E-mail', value: 'b1022096@fun.ac.jp' },
+        { item: 'E-mail', value: 'naokokubo2@gmail.com' },
       ],
       github: 'https://github.com/ona07',
       workExperience: [
         { period: '2004.01.29',  company: '誕生' ,position: ''},
-        { period: '2020.08.31-2021.04.07', company: 'E-pala' , position: 'menber'},
-        { period: '2022.04.18-2023.3.31', company: 'Fun-i-Con' , position: 'menber', },
-        { period: '2023.04.01-2024.3.31', company: 'Fun-i-Con' , position: 'menber', },
-        { period: '2024.04.01-2025.3.31', company: 'Fun-i-Con' , position: 'poloject leader', },
-        { period: '2024.04.01-2025.3.31', company: '数理モデリングプロジェクト' , position: 'leader', },
       ],
       skills: [
-        'Japanese', 'FastAPI', 'Python', 'HTML', 'Javascript', 'CSS', 'Vue.js', 'Processing', 'C', 'R', 'Blender',
+        'Japanese', 'FastAPI', 'Python', 'HTML', 'Javascript', 'css', 'Vue.js', 'Processing', 'C', 'R', 'Blender',
         'analysis (mathematical)', 'Practical English Proficiency Test Level 4',
       ],
       articles: [
@@ -84,6 +79,12 @@ export default {
           name: '北の6大学',
           period: '2022/08/29~2023/03/09',
           link: 'https://www.otaru-uc.ac.jp/shoudai_blog/263376/'
+        },
+        {
+          company: 'Fun-i-Con',
+          name: '北海道アプリコンテスト最優秀賞',
+          period: '2024/02/16',
+          link: 'https://www.fun.ac.jp/activity/23044#:~:text=%E9%AB%98%E5%BA%A6ICT%E6%BC%94%E7%BF%92%E3%83%81'
         },
       ],
     };
@@ -149,5 +150,8 @@ h2 {
 .project-position {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
+}
+.article-container {
+  margin-left: 30px;
 }
 </style>
